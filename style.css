@@ -1,0 +1,28 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 72vh;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+}
+
+.parent .item img {
+    width: 85%;
+}
+
+.item {
+    align-self: center;
+}
+
+.img-cont {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+}

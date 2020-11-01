@@ -63,7 +63,13 @@ class DataController {
     }
 
     static obtenerDatos( dato ) {
-        return JSON.parse( localStorage.getItem(dato) );
+        if(dato === 'docentes'){
+            this.validarDocentes()
+            return this.docentes;
+        }
+
+        this.validarEstudiantes()
+        return this.estudiantes;
     }
 
 }
